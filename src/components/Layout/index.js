@@ -8,12 +8,11 @@ import styled from 'styled-components'
 export const Wrapper = styled.div``
 
 const Layout = ({ children }) => {
+
   return (
-    <>
-      <Wrapper>
-          {children}
-      </Wrapper>
-    </>
+        <Wrapper>
+            {children}
+        </Wrapper>
   )
 }
 

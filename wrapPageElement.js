@@ -1,16 +1,17 @@
-import React from 'react'
+import React  from 'react'
 // import PropTypes from 'prop-types'
-// import { GlobalStyle } from './src/utils/styles'
 import Layout from './src/components/Layout'
-// import ClientOnly from './src/components/ClientOnly'
-// import { ThemeProvider } from 'emotion-theming'
-// import { theme } from './src/utils/styles'
 import { LocaleProvider } from './src/context/LocaleProvider'
+import NavProvider from "./src/components/Provider/NavProvider";
+
 
 const wrapPageElement = ({ element, props }) => {
+
   return (
     <LocaleProvider locale={props.pageContext.locale}>
+      <NavProvider>
           <Layout {...props}>{element}</Layout>
+      </NavProvider>
     </LocaleProvider>
   )
 }
