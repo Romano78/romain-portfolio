@@ -1,0 +1,21 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "landing_page"
+      }
+    },
+    "landing_banner": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": [
+          "banner_home"
+        ],
+        "label": "landing banner",
+        "placeholder": "Landing banner"
+      }
+    }
+  }
+}

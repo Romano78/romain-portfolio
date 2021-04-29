@@ -1,0 +1,35 @@
+module.exports = {
+    'en-us': {
+      default: true,
+      path: 'en',
+      locale: 'en-us',
+      siteLanguage: 'en',
+      ogLang: 'en_us',
+      category: 'Category',
+      categories: 'Categories',
+      was: 'was',
+      were: 'were',
+      tagged: 'tagged with',
+      recent: 'Recent',
+      projects: 'projects',
+      allCategories: 'All categories',
+      entries: 'entries',
+    },
+    'fr-fr': {
+      default: false,
+      path: 'fr',
+      locale: 'fr-fr',
+      siteLanguage: 'fr',
+      ogLang: 'fr_FR',
+      defaultDescription:
+        'Porject French English with the help (i18n)',
+      headline: 'Full Stack Web Developer',
+      category: 'Categorie',
+      categories: 'Categories',
+      recent: 'Recent',
+      projects: 'projects',
+      allCategories: 'All categories',
+      entries: 'entries',
+    },
+  }
+  

@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const prismicLinkResolver = require('./src/gatsby/linkResolver')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -7,6 +13,26 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `romain-portfolio`,
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver: () => prismicLinkResolver,
+        schemas: {
+          banner_home: require('./src/schemas/banner_home.json'),
+          landing_page: require('./src/schemas/landing_page.json'),
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

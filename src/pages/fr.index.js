@@ -2,8 +2,9 @@ import * as React from "react"
 import IndexLayout from '../components/pages/home/index'
 import { graphql } from 'gatsby'
 
+
 export const query = graphql`
-query LandingPageQuery($locale: String) {
+query LandingFrPageQuery($locale: String) {
    landingPage: prismicLandingPage(lang: {eq: $locale }) {
       data {
         landing_banner {
@@ -21,11 +22,8 @@ query LandingPageQuery($locale: String) {
     }
   }
 `
-
-const IndexPage = ({data, location}) => { 
-  return (
-    <IndexLayout data={data} location={location}/>
-  )
-}
+const IndexPage = ({data, location}) => (
+  <IndexLayout data={data} location={location}/>
+)
 
 export default IndexPage
