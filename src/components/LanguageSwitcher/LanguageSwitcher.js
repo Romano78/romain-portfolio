@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { LanguageSwitcherContainer } from './styles'
 
 const LocaleComponent = ({ location }) => {
-  console.log(location)
   const lang = React.useContext(LocaleContext)
   const i18n = lang.i18n[lang.locale]
   return (
