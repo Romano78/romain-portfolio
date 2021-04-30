@@ -1,5 +1,5 @@
 import React from 'react'
-import ThemeSwitcher from '../ThemeSwitcher/index'
+// import ThemeSwitcher from '../ThemeSwitcher/index'
 import {NavContainer, BurgerContainer, DesNavItemContainer, MenuItemContainer} from './styles'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 import Burger from './Burger/index'
@@ -9,7 +9,7 @@ const Navbar = ({location}) => {
     return (
         <NavContainer>
             <DesNavItemContainer>
-                <ThemeSwitcher/> 
+                {/* <ThemeSwitcher/>  */}
                     <MenuItemContainer>
                         <a href="/">About</a>
                         <a href="/">Skils</a>

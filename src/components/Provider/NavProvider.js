@@ -9,7 +9,7 @@ import DarkTheme from '../../utils/Theme/DarkTheme'
 const GlobalStyle = createGlobalStyle`
 
   body {
-  font-family: "Lato", "sans-serif";
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   overflow-x: hidden;
   background-color: ${(props) => props.theme.colors.primaryColor};  
@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     color: ${props => props.theme.colors.tertiaryColor} !important;
+    font-family: 'Open Sans', sans-serif;
+
   }
 
   html {

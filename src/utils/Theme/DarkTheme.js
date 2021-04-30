@@ -20,9 +20,10 @@ export const theme = {
     xl: '1920px',
   },
   fontFamily: {
-    primary: 'francesco-regular',
-    secondary: 'protogrotesk-regular',
-    tertiary: 'Arial',
+    primary: 'Open Sans',
+    secondary: 'Lora',
+    tertiary: "Montserrat: sans-serif"
+
   },
   fonts: {
     heading1: '48px',
