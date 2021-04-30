@@ -7,33 +7,40 @@ import DarkTheme from '../../utils/Theme/DarkTheme'
 
 
 const GlobalStyle = createGlobalStyle`
+
   body {
   font-family: "Lato", "sans-serif";
   margin: 0;
   overflow-x: hidden;
-  background-color: ${(props) => props.theme.primaryColor};
-  color: ${(props) => props.theme.bodyBackgroundColor};
-  
+  background-color: ${(props) => props.theme.colors.primaryColor};  
+  color: ${props => props.theme.colors.secondaryColor};
+  scroll-behavior: smooth;
+  overflow: visible;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Kaushan Script";
+  a {
+    color: ${props => props.theme.colors.tertiaryColor} !important;
   }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
 `;
 
 const NavProvider = ({ children }) => {
-  const [theme, setTheme] = useState(LightTheme);
+  const [theme, setTheme] = useState(DarkTheme);
+  const [toggleDrawer, setToggleDrawer] = useState(false)
 
-  return (
+   return (
     <NavContext.Provider
       value={{
         theme,
         setTheme,
+        toggleDrawer,
+        setToggleDrawer,
       }}
     >
         <ThemeProvider

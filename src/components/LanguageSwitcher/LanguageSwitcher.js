@@ -1,25 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import LocaleContext from '../../context/LocaleProvider'
 import PropTypes from 'prop-types'
-import { LanguageSwitcherContainer } from './styles'
+import { LanguageSwitcherContainer, SwitcherP } from './styles'
+import NavContext from '../../context/NavContext'
 
 const LocaleComponent = ({ location }) => {
   const lang = React.useContext(LocaleContext)
   const i18n = lang.i18n[lang.locale]
+  const navContext = useContext(NavContext)
+
   return (
     <LanguageSwitcherContainer>
       {i18n.locale === 'en-us' ? (
         <>
-          <p className="Header__LanguageSwitcher-button current">EN </p>
+          <SwitcherP className="Header__LanguageSwitcher-button current" open={navContext.toggleDrawer}>EN </SwitcherP>
           <Link
             to={`/fr${location.pathname}`}
             className="Header__LanguageSwitcher-button"
           >
-            <p>
+            <SwitcherP open={navContext.toggleDrawer}>
               <span style={{ paddingRight: '5px', paddingLeft: '5px' }}>/</span>
               FR
-            </p>
+            </SwitcherP>
           </Link>
         </>
       ) : i18n.locale === 'fr-fr' ? (
@@ -32,13 +35,13 @@ const LocaleComponent = ({ location }) => {
             }`}
             className="Header__LanguageSwitcher-button"
           >
-            <p>EN</p>
+            <SwitcherP open={navContext.toggleDrawer}>EN</SwitcherP>
           </Link>
 
-          <p className="Header__LanguageSwitcher-button current">
+          <SwitcherP className="Header__LanguageSwitcher-button current" open={navContext.toggleDrawer}>
             <span style={{ paddingLeft: '5px', fontWeight: 'initial' }}>/</span>{' '}
             FR
-          </p>
+          </SwitcherP>
         </>
       ) : (
         ''
