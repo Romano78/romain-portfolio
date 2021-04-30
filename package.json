@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@react-spring/three": "^9.1.2",
+    "@react-spring/web": "^9.1.2",
+    "@react-three/drei": "^4.3.2",
+    "@react-three/fiber": "^6.0.17",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.0",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
@@ -21,7 +25,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.3"
+    "styled-components": "^5.2.3",
+    "three": "^0.128.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

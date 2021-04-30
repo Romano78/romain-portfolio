@@ -7,7 +7,10 @@ import DarkTheme from '../../utils/Theme/DarkTheme'
 
 
 const GlobalStyle = createGlobalStyle`
-
+  * {
+    box-sizing: border-box;
+  }
+  
   body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
