@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/web'
-import Scene from './Scene'
+import Scene from './scene'
 
 const BannerAnimation = ({navContext})  => {
   // This spring controls the background and the svg fill (text color)
