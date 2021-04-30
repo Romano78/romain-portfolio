@@ -38,7 +38,7 @@ const LocaleComponent = ({ location }) => {
             <SwitcherP open={navContext.toggleDrawer}>EN</SwitcherP>
           </Link>
 
-          <SwitcherP className="Header__LanguageSwitcher-button current" open={navContext.toggleDrawer}>
+          <SwitcherP className="Header__LanguageSwitcher-button current">
             <span style={{ paddingLeft: '5px', fontWeight: 'initial' }}>/</span>{' '}
             FR
           </SwitcherP>
