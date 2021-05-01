@@ -1,54 +1,45 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TextStyled } from './styles.js'
+import { TitleStyled } from './styles'
 
-const Text = ({
+const Title = ({
   children,
-  className,
+  as = 'span',
+  type = 'heading1',
   style,
-  type = 'body',
-  as = 'p',
-  dangerouslySetInnerHTML,
-  clickHandler,
+  className,
 }) => {
   const textProps = {
     as,
-    style: style ? style : null,
-    className: `${className ? className : ''} Text ${type ? type : ''}`,
     type,
-    onClick: clickHandler ? clickHandler : null,
+    children,
+    style: style ? style : null,
+    className: `${className ? className : ''} Title ${type ? type : ''}`,
   }
 
-  return dangerouslySetInnerHTML ? (
-    <TextStyled
-      dangerouslySetInnerHTML={dangerouslySetInnerHTML}
-      {...textProps}
-    />
-  ) : (
-    <TextStyled {...textProps}>{children}</TextStyled>
-  )
+  return <TitleStyled {...textProps}>{children}</TitleStyled>
 }
 
-Text.propTypes = {
+Title.propTypes = {
+  children: PropTypes.any,
+  as: PropTypes.string,
+  type: PropTypes.oneOf([
+    'heading1',
+    'heading2',
+    'heading3',
+    'heading4',
+    'heading5',
+    'heading6',
+    'heading7',
+    'heading8',
+    'overline',
+    'menuHeading',
+    'contactHeading',
+    'backgroundHeading',
+    'calendarTitle',
+  ]),
   className: PropTypes.string,
   style: PropTypes.object,
-  type: PropTypes.oneOf([
-    'body',
-    'smallText500',
-    'smallText400',
-    'smallText700',
-    'smallText800',
-    'smallText900',
-    'bigText400',
-    'link',
-    'link primary',
-    'link secondary',
-    'link tertiary',
-  ]),
-  as: PropTypes.string,
-  dangerouslySetInnerHTML: PropTypes.any,
-  children: PropTypes.any,
-  clickHandler: PropTypes.func,
 }
 
-export default Text
+export default Title
