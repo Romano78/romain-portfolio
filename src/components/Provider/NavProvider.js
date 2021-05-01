@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   overflow-x: hidden;
+  height: 100vh;
   background-color: ${(props) => props.theme.colors.primaryColor};  
   color: ${props => props.theme.colors.secondaryColor};
   scroll-behavior: smooth;

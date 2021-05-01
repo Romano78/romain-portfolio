@@ -1,163 +1,98 @@
 import styled from 'styled-components'
 
-export const TextStyled = styled.p`
-  &.body {
-    font-family: ${(props) => props.theme.fontFamily.tertiary};
-    font-size: ${(props) => props.theme.fonts.mediumText};
-    font-weight: normal;
+export const TitleStyled = styled.p`
+  &.heading1 {
+    font-size: ${props => props.theme.fonts.heading2};
+    font-weight: bold;
+    font-family: 'Be Vietnam', sans-serif;
     font-style: normal;
-    line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.body};
-      line-height: 1.6;
-    }
-  }
-  &.smallText400 {
-    font-family: ${(props) => props.theme.fontFamily.tertiary};
-    font-size: ${(props) => props.theme.fonts.links};
-    color: ${(props) => props.theme.colors.black};
-    font-weight: normal;
-    font-style: normal;
-    line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.mediumText};
-      opacity: 0.4;
-    }
-  }
-  &.smallText500 {
-    font-family: ${(props) => props.theme.fontFamily.tertiary};
-    font-size: ${(props) => props.theme.fonts.mediumText};
-    font-weight: normal;
-    font-style: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
 
     @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
-      font-size: ${(props) => props.theme.fonts.mediumText};
-      line-height: 1.7;
+      font-size: ${(props) => props.theme.fonts.heading1};
     }
   }
-  &.smallText700 {
-    font-family: ${(props) => props.theme.fontFamily.tertiary};
-    font-size: ${(props) => props.theme.fonts.mediumText};
+  &.heading2 {
+    font-size: ${props => props.theme.fonts.heading6};
+    font-family: ${props => props.theme.fontFamily.secondary};
     font-weight: normal;
     font-style: normal;
     line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.body};
+    text-transform: capitalize;
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      font-size: ${props => props.theme.fonts.heading2};
+    }
+  }
+  &.heading3 {
+    font-family: ${props => props.theme.fontFamily.primary};
+    font-size: ${props => props.theme.fonts.heading6};
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      font-size: ${props => props.theme.fonts.heading3};
+      line-height: 1.3;
+    }
+  }
+  &.heading4 {
+    font-family: ${props => props.theme.fontFamily.secondary};
+    font-size: ${props => props.theme.fonts.heading6};
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      font-size: ${props => props.theme.fonts.heading4};
+      line-height: 1.3;
+    }
+  }
+  &.heading5 {
+    font-family: ${props => props.theme.fontFamily.primary};
+    font-size: ${props => props.theme.fonts.heading7};
+    line-height: 1.3;
+    font-weight: normal;
+    font-style: normal;
+  }
+  &.heading6 {
+    font-family: ${props => props.theme.fontFamily.secondary};
+    font-size: ${props => props.theme.fonts.overline};
+    line-height: 1.3;
+    font-style: normal;
+    font-weight: normal;
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      font-size: ${props => props.theme.fonts.heading6};
+      line-height: 1.3;
     }
   }
 
-  &.smallText800 {
-    font-family: ${(props) => props.theme.fontFamily.primary};
-    font-size: ${(props) => props.theme.fonts.smallText};
-    font-weight: normal;
+  &.heading7 {
+    font-family: ${props => props.theme.fontFamily.secondary};
+    font-size: ${props => props.theme.fonts.overline};
+    color: ${props => props.theme.colors.secondary};
+    line-height: 1.3;
     font-style: normal;
-    line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.bigText};
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      font-size: ${props => props.theme.fonts.heading6};
+      line-height: 1.3;
     }
   }
 
-  &.smallText900 {
-    font-family: ${(props) => props.theme.fontFamily.tertiary};
-    font-size: ${(props) => props.theme.fonts.smallText};
-    font-weight: normal;
+  &.heading8 {
+    font-family: ${props => props.theme.fontFamily.primary};
+    font-size: ${props => props.theme.fonts.heading6};
+    text-transform: capitalize;
+    line-height: 1.3;
     font-style: normal;
-    line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.body};
-    }
-  }
-  &.bigText400 {
-    font-family: ${(props) => props.theme.fontFamily.primary};
-    font-size: ${(props) => props.theme.fonts.body};
     font-weight: normal;
-    font-style: normal;
-    line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.quote};
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      font-size: ${props => props.theme.fonts.heading4};
+      line-height: 1.3;
     }
   }
-  a {
-    color: ${(props) => props.theme.colors.secondary};
-  }
-  &.link {
-    color: ${(props) => props.theme.colors.black};
-    font-family: ${(props) => props.theme.fontFamily.tertiary};
-    font-weight: normal;
-    font-size: ${(props) => props.theme.fonts.links};
-    display: inline-block;
-    text-decoration: none;
-    opacity: 0.4;
-    cursor: pointer;
-    line-height: normal;
-    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      font-size: ${(props) => props.theme.fonts.mediumText};
-    }
-    &::before,
-    &::after {
-      content: '';
-      width: 100%;
-      height: 1px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      transition: transform 200ms linear;
-      transform-origin: right;
-    }
-    &::after {
-      transform: scaleX(0);
-      transition-delay: 250ms;
-      transform-origin: left;
-    }
-    &:hover {
-      &::after {
-        transform: scaleX(1);
-      }
-      &::before {
-        transform: scaleX(0);
-      }
-    }
-    &.primary {
-      color: ${(props) => props.theme.colors.primary};
-      &::before,
-      &::after {
-        background: ${(props) => props.theme.colors.primary};
-      }
-      &:hover {
-        color: ${(props) => props.theme.colors.secondary};
-        &::before,
-        &::after {
-          background: ${(props) => props.theme.colors.secondary};
-        }
-      }
-    }
-    &.secondary {
-      color: ${(props) => props.theme.colors.black};
-      &::before,
-      &::after {
-        background: ${(props) => props.theme.colors.secondary};
-      }
-      &:hover {
-        color: ${(props) => props.theme.colors.primary};
-        &::before,
-        &::after {
-          background: ${(props) => props.theme.colors.primary};
-        }
-      }
-    }
-    &.tertiary {
-      color: ${(props) => props.theme.colors.tertiary};
-      &::before,
-      &::after {
-        background: ${(props) => props.theme.colors.tertiary};
-      }
-      &:hover {
-        color: ${(props) => props.theme.colors.secondary};
-        &::before,
-        &::after {
-          background: ${(props) => props.theme.colors.secondary};
-        }
-      }
-    }
-  }
+
 `

@@ -1,37 +1,33 @@
 import styled from "styled-components"
 
 export const BannerAnimationContainer = styled.div`
+        main {
+            .canvas {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                canvas {
+                    display: block;
+                     width: 240px;
+                    height: 320px;
+                }
+            }
+        }
 
-    .canvas {
-    order: 2;
-    flex: 1;
-    height: 100%;
-    }
-
-    .overlay {
-    position: relative;
-    order: 1;
-    flex: 1;
-    pointer-events: none;
-    }
-
-    svg {
-    width: 100%;
-    height: 100%;
-    }
-
-    @media only screen and (max-aspect-ratio: 8/7) {
-    main {
-        flex-direction: column;
-    }
-    .canvas {
-        order: 1;
-    }
-    svg {
-        order: 2;
-        width: 100%;
-        max-width: 100%;
-        height: 60vh;
-    }
+    @media(min-width: ${props => props.theme.breakpoints.md}) {
+        main {
+            .canvas {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                canvas {
+                    display: block;
+                     width: 388px;
+                    height: 630px;
+                }
+            }
+        }
     }
 `

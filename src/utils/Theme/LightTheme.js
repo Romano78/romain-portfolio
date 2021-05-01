@@ -1,6 +1,7 @@
 export const theme = {
   id: "light",
   colors: {
+    black: '#000000',
     primaryColor: '#FFF',
     secondaryColor: '#000000',
     tertiaryColor: '#E8B059'
@@ -18,12 +19,12 @@ export const theme = {
     xl: '1920px',
   },
   fontFamily: {
-    primary: 'francesco-regular',
-    secondary: 'protogrotesk-regular',
-    tertiary: 'Arial',
+    primary: 'Open Sans',
+    secondary: 'Lora',
+    tertiary: "Montserrat: sans-serif"
   },
   fonts: {
-    heading1: '48px',
+    heading1: '80px',
     heading2: '45px',
     heading3: '36px',
     heading4: '30px',
