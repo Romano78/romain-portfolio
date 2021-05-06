@@ -26,7 +26,7 @@ export const theme = {
 
   },
   fonts: {
-    heading1: '5.5rem',
+    heading1: '6.5rem',
     heading2: '45px',
     heading3: '36px',
     heading4: '30px',

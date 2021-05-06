@@ -10,7 +10,7 @@ export const TitleStyled = styled.p`
     margin: 0;
     padding: 0;
 
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    @media (min-width: ${(props) => props.theme.breakpoints.l}) {
       font-size: ${(props) => props.theme.fonts.heading1};
     }
   }

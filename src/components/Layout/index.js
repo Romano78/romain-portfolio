@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Navbar from '../Navbar/Index'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  min-height: 100vh;
+`
 
 const Layout = ({ children, location }) => {
 

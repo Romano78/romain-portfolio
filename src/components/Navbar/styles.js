@@ -28,6 +28,6 @@ export const MenuItemContainer = styled.div`
     a {
         padding-right: 10px;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: capitalize;
     }
 `

@@ -22,7 +22,7 @@ export const StyledMenu = styled.nav`
 
   a {
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;

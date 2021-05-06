@@ -1,18 +1,23 @@
 import React from 'react'
 import { LandingBannerContainer, AnimationContainer, IntroductionContainer, BannerTextContainer } from './styles'
 import BannerAnimation from '../BannerAnimation/index'
-import Title from '.././Utilities/Title/index'
+import AnimatedText from "../AnimatedText/index"
 
 const LandingBanner = ({navContext}) => {
     return (
         <LandingBannerContainer>
             <IntroductionContainer>
                 <BannerTextContainer>
-                    <Title type="heading1" as="h1">Hi,</Title>
-                    <br/>
-                    <Title type="heading1"as="h1">I'am Romain</Title>
-                    <br/>
-                    <Title type="heading1"as="h1"> a Web Developer</Title>
+                <AnimatedText>
+                  Hi,
+                </AnimatedText>
+                <AnimatedText>
+                  I'm  Romain , 
+                </AnimatedText>
+                <AnimatedText>
+                  web  developer
+                </AnimatedText>
+                
                 </BannerTextContainer>
             </IntroductionContainer>
             <AnimationContainer>

@@ -24,7 +24,7 @@ export const theme = {
     tertiary: "Montserrat: sans-serif"
   },
   fonts: {
-    heading1: '80px',
+    heading1: '6.5rem',
     heading2: '45px',
     heading3: '36px',
     heading4: '30px',
