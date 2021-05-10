@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { Suspense, useEffect, useState, useRef } from 'react'
+import React, { Suspense, useState, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { PerspectiveCamera, Environment, MeshDistortMaterial, ContactShadows } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
@@ -11,7 +11,6 @@ import DarkTheme from '../../utils/Theme/DarkTheme'
 const AnimatedMaterial = a(MeshDistortMaterial)
 
 const Scene = ({ setBg, navContext }) => {
-  console.log(navContext)
   const sphere = useRef()
   const light = useRef()
   const [mode, setMode] = useState(false)

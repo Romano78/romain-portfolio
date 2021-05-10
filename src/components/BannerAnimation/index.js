@@ -8,7 +8,7 @@ import Scene from './scene'
 
 const BannerAnimation = ({navContext})  => {
   // This spring controls the background and the svg fill (text color)
-  const [{ background, fill }, set] = useSpring({ background: props => navContext.theme ? props.theme.colors.primaryColor : props.theme.colors.secondaryColor, fill: '#red' }, [])
+  const [{ background }, set] = useSpring({ background: props => navContext.theme ? props.theme.colors.primaryColor : props.theme.colors.secondaryColor, fill: '#red' }, [])
   return (
     <BannerAnimationContainer>
       <a.main style={{ background }}>
